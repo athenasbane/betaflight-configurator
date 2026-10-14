@@ -5533,6 +5533,18 @@
         "message": "OSD Profile number",
         "description": "Description of the header of the OSD elements column associated to each profile"
     },
+    "osdSetupProfileVisibilityHelp": {
+        "message": "Each numbered column is an OSD profile. Check a box to show an element in that profile.",
+        "description": "Visible guidance above the OSD element list explaining the profile visibility checkboxes"
+    },
+    "osdSetupSharedProfilePositionHelp": {
+        "message": "You can check multiple profiles. An element uses the same position in every profile.",
+        "description": "Shown only when multiple OSD profiles are available; an element's visibility can differ between profiles but its position is shared"
+    },
+    "osdSetupProfilePreviewHelp": {
+        "message": "The preview shows the active OSD profile.",
+        "description": "Explains that the Active OSD Profile selector determines which profile appears in the preview"
+    },
     "osdSetupElementsTitle": {
         "message": "Elements"
     },

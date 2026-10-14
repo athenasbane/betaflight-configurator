@@ -49,6 +49,13 @@
                                     >{{ profileIdx }}</span
                                 >
                             </template>
+                            <p id="osd-profile-visibility-help" class="mb-2 text-xs text-muted">
+                                {{ $t("osdSetupProfileVisibilityHelp") }}
+                                <template v-if="osdStore.numberOfProfiles > 1">
+                                    {{ $t("osdSetupSharedProfilePositionHelp") }}
+                                </template>
+                                {{ $t("osdSetupProfilePreviewHelp") }}
+                            </p>
                             <!-- Search box -->
                             <UInput
                                 v-model="elementSearchQuery"
@@ -58,7 +65,12 @@
                                 class="mb-2"
                             />
                             <!-- Element list -->
-                            <div class="flex flex-col">
+                            <div
+                                class="flex flex-col"
+                                role="group"
+                                :aria-label="$t('osdSetupElementsTitle')"
+                                aria-describedby="osd-profile-visibility-help"
+                            >
                                 <div
                                     v-for="field in filteredDisplayItems"
                                     :key="field.index"
